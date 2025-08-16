@@ -1,0 +1,74 @@
+@font-face{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Arial'),
+         url('resources/arial.woff');
+}
+@font-face{
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Clash Display'),
+         url('resources/clash display.woff');
+}
+@font-face{
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Clash Display Bold'),
+         url('resources/clash display_bold.woff');
+}
+
+
+.fixed-position {
+	position: fixed !important;
+}
+
+
+
+html, body {
+     width: 100%!important;
+    overflow-x: hidden!important;
+ background-color: black!important;;
+
+
+
+}
+.carousel {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+}
+
+.carousel2 {
+    display: flex;
+    width: max-content;
+    animation: scroll-right 20s linear infinite;
+}
+
+.carousel-text {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    white-space: nowrap;
+    padding: 0 40px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
