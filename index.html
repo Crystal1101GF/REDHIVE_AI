@@ -1,62 +1,171 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedHive</title>
-    <meta name="description" content="RedHive powers the first Onchain Intelligence Engine, enabling AI Agent solutions to drive the next-gen DeFAI economy.">
-    <meta property="og:title" content="RedHive">
-    <meta property="og:description" content="RedHive powers the first Onchain Intelligence Engine, enabling AI Agent solutions to drive the next-gen DeFAI economy.">
-    <meta property="og:image" content="https://redhive.ai/image.png">
-    <meta property="og:url" content="https://redhive.ai">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <link rel="icon" href="https://redhive.ai/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://redhive.ai/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://redhive.ai/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="https://redhive.ai/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://redhive.ai/apple-touch-icon.png">
-    <link rel="manifest" href="https://redhive.ai/site.webmanifest">
+    <title>REDHIVE AI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="REDHIVE POWERS THE FIRST ONCHAIN INTELLIGENCE ENGINE, ENABLING AI AGENT SOLUTIONS TO DRIVE THE NEXT-GEN DEFAI ECONOMY. IT PROVIDES ADVANCED AI AGENT TOOLING, COPILOT, AND KEY ENDPOINTS, ENABLING UNIQUE HUMAN-AGENT COORDINATION AND ORCHESTRATION.">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="initial-scale=1.0">
     <style>
-        html, body {
+        html {
             height: 100%;
-            margin: 0;
-            background-color: black;
             overflow: hidden;
         }
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+.carousel {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+}
 
-        #contenido {
+.carousel2 {
+    display: flex;
+    width: max-content;
+    animation: scroll-right 20s linear infinite;
+}
+
+.carousel-text {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    white-space: nowrap;
+    padding: 0 40px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.no, .no * {
+  pointer-events: none !important;
+}
+        #preload {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 2s ease-out;
+        }
+        #preload video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 10px;
+            background-color: #FF003D;
+            transition: width 0.1s linear;
         }
     </style>
-    <script>
-        window.onload = function() {
-            var iframe = document.getElementById('contenido');
-            var timestamp = new Date().getTime(); 
-
-            if (window.innerWidth <= 768) {
-                iframe.src = 'main.html?v=' + timestamp;
-            } else {
-                iframe.src = 'redhiv3?v=' + timestamp;
-            }
-
-            var element = document.documentElement;
-            if (element.requestFullscreen) {
-                element.requestFullscreen();
-            } else if (element.mozRequestFullScreen) {
-                element.mozRequestFullScreen();
-            } else if (element.webkitRequestFullscreen) {
-                element.webkitRequestFullscreen();
-            } else if (element.msRequestFullscreen) {
-                element.msRequestFullscreen();
-            }
-        }
-    </script>
+    <link href = "https://fonts.googleapis.com/css?family=Noto+Sans+Mono:400,500,600,700,800,900" rel = "stylesheet">
+    
+    <script type="text/javascript" src="slplayer.js"></script>
+    
 </head>
 <body>
-    <iframe id="contenido"></iframe>
+    <div id="preload">
+        <video id="introVideo" autoplay muted playsinline>
+            <source src="https://redhive.ai/intro/redhive.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+        </video>
+        <div id="progress-bar"></div>
+    </div>
+    <div id="sxeYpyJO" style="position: relative; height: 100%;"></div>
+    <script type="text/javascript">
+        const video = document.getElementById('introVideo');
+        const preload = document.getElementById('preload');
+        const progressBar = document.getElementById('progress-bar');
+        video.addEventListener('timeupdate', function() {
+            const progress = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = progress + '%';
+        });
+        video.addEventListener('ended', function() {
+            preload.style.opacity = '0';
+            setTimeout(function() {
+                preload.style.display = 'none';
+            }, 1000);
+        });
+        (function(Saola) {
+	preloaderDocData = {"ascene":{"aa":true,"autoKeyTime":0,"currentTime":0,"id":1,"k":8,"n":"Across-Scene Layer","rp":[[0,0,{"f":[0],"fe":[0,0,100,100,100,0,0,0],"l":["none"],"pso":[50,50,1200,1],"r":[0,0,"100%","100%",0]}]],"sceneLayer":1,"st":[0,0],"timelines":[{"dur":0,"id":1,"n":"Timeline"}]},"dur":1000,"h":1084,"k":77824,"mm":[0,0],"mpv":2,"pe":null,"resourceFolder":"preloader_resources","resources":[[1,4,"Noto Sans Mono"],[2,3,"loading",{"af":false,"align":4,"ascene":{"aa":true,"autoKeyTime":0,"currentTime":0,"id":1,"k":8,"n":"Across-Scene Layer","rp":[[0,0,{"f":[0],"fe":[0,0,100,100,100,0,0,0],"l":["none"],"pso":[50,50,1200,1],"r":[0,0,"100%","100%",0]}]],"sceneLayer":1,"st":[0,0],"timelines":[{"dur":0,"id":1,"n":"Timeline"}]},"dur":3000,"scenes":[{"aa":true,"autoKeyTime":0,"currentTime":1840,"elems":[{"id":1,"k":4,"n":"Text_1","rp":[[0,0,{"f":[0],"fe":[0,0,100,100,100,0,0,0],"l":["none"],"r":[1.2988281248738076e-05,-7.812500030013325e-06,535,50,0],"txt":["<p>LOADING...</p>","'Noto Sans Mono'",50,[255,255,255,255],[0,0,0,0],"normal",0,0,0,1,128,120,0,0,0]}]],"taf":1}],"id":1,"k":8,"n":"Scene_1","rp":[[0,0,{"f":[0],"fe":[0,0,100,100,100,0,0,0],"l":["none"],"pso":[50,50,1200,1],"r":["0%","0%","100%","100%",0]}]],"sceneLayer":0,"st":[0,0],"timelines":[{"dur":3000,"id":1,"n":"Timeline","ra":[[0,0,[[1,[["d",[],[[2000,[{"d":0,"e":"1","s":"0","t":0}]]]]],{"2000":{"ao":1,"d":0,"de":0,"t":0,"ta":1,"td":0.1,"to":-3}}]]]],"t":[[3000,[[3,-1,0,1,0]]]]}]}]}],[3,3,"spinner",{"af":false,"align":4,"ascene":{"aa":true,"autoKeyTime":0,"currentTime":0,"id":1,"k":8,"n":"A través de la capa de escena","rp":[[0,0,{"f":[0],"fe":[0,0,100,100,100,0,0,0],"l":["none"],"pso":[50,50,1200,1],"r":[0,0,"100%","100%",0]}]],"sceneLayer":1,"st":[0,0],"timelines":[{"dur":0,"id":1,"n":"Línea de tiempo"}]},"dur":820,"scenes":[{"aa":true,"autoKeyTime":0,"currentTime":820,"elems":[{"id":8,"k":9,"n":"Forma_1","rp":[[0,0,{"f":[1,239,239,239,255],"fe":[0,0,100,100,100,0,0,0],"l":["none"],"r":[34.9639,5.4054,5.03603,26.9392,0],"s":[11],"t":[[0,0,1080],[],[],[2.5180892944335938,6.124999523162842,0]],"txt":["","'Arial'",18,[255,255,255,255],[0,0,0,0],"normal",0,0,0,4,128,120,0,0,0]}]]}],"id":1,"k":8,"n":"Scene_1","rp":[[0,0,{"f":[0],"fe":[0,0,100,100,100,0,0,0],"l":["none"],"pso":[50,50,1200,1],"r":["0%","0%","100%","100%",0]}]],"sceneLayer":0,"st":[0,0],"timelines":[{"dur":820,"id":1,"n":"Timeline","ra":[[0,0,[[8,[["rZ",[{"d":820,"e":"1440deg","es":0,"s":"1080deg","t":0}]]],{}]]]],"t":[[820,[[1,-1,1,0]]]]}]}]}]],"scenes":[{"aa":true,"autoKeyTime":0,"currentTime":1000,"id":1,"k":8,"n":"Scene_1","rp":[[0,0,{"f":[1,0,0,0,255],"fe":[0,0,100,100,100,0,0,0],"l":["none"],"pso":[50,50,1200,1],"r":[0,0,1920,1084,0]}]],"sceneLayer":0,"st":[0,0],"timelines":[{"dur":1000,"id":1,"n":"Timeline","t":[[1000,[[1,-1,1,0]]]]}]}],"v":5,"w":1920};
+	var f = [];
+	preloaderDocData.f = f;
+	preloaderDocData.li = false;
+	Saola.openDoc('redhive9x.js', 'sxeYpyJO', {paused:false, preloaderDoc: preloaderDocData, center: 'both', autofit: true});})(AtomiSaola);
+        let scrollSpeed = 0.5;
+        let isScrolling = false;
+        const normalizeDelta = (delta) => {
+            return delta / 6.5;
+        };
+        const handleArrowKeys = (e) => {
+            if (e.keyCode === 38) {
+                scrollSpeed -= 10;
+            } else if (e.keyCode === 40) {
+                scrollSpeed += 10;
+            }
+            if (!isScrolling) {
+                isScrolling = true;
+                const inertiaScroll = () => {
+                    if (Math.abs(scrollSpeed) > 1.1) {
+                        window.scrollBy(0, scrollSpeed);
+                        scrollSpeed *= 0.98;
+                        requestAnimationFrame(inertiaScroll);
+                    } else {
+                        isScrolling = false;
+                    }
+                };
+                inertiaScroll();
+            }
+        };
+        window.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            scrollSpeed += normalizeDelta(e.deltaY);
+            if (!isScrolling) {
+                isScrolling = true;
+                const inertiaScroll = () => {
+                    if (Math.abs(scrollSpeed) > 1.1) {
+                        window.scrollBy(0, scrollSpeed);
+                        scrollSpeed *= 0.98;
+                        requestAnimationFrame(inertiaScroll);
+                    } else {
+                        isScrolling = false;
+                    }
+                };
+                inertiaScroll();
+            }
+        }, { passive: false });
+        window.addEventListener('keydown', handleArrowKeys);
+    </script>
 </body>
 </html>

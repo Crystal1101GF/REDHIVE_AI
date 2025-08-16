@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedHive</title>
+    <meta name="description" content="RedHive powers the first Onchain Intelligence Engine, enabling AI Agent solutions to drive the next-gen DeFAI economy.">
+    <meta property="og:title" content="RedHive">
+    <meta property="og:description" content="RedHive powers the first Onchain Intelligence Engine, enabling AI Agent solutions to drive the next-gen DeFAI economy.">
+    <meta property="og:image" content="https://redhive.ai/image.png">
+    <meta property="og:url" content="https://redhive.ai">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <link rel="icon" href="https://redhive.ai/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://redhive.ai/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://redhive.ai/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://redhive.ai/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://redhive.ai/apple-touch-icon.png">
+    <link rel="manifest" href="https://redhive.ai/site.webmanifest">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        #contenido {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var iframe = document.getElementById('contenido');
+            var timestamp = new Date().getTime(); 
+
+            if (window.innerWidth <= 768) {
+                iframe.src = 'main.html?v=' + timestamp;
+            } else {
+                iframe.src = 'redhiv3?v=' + timestamp;
+            }
+
+            var element = document.documentElement;
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        }
+    </script>
+</head>
+<body>
+    <iframe id="contenido"></iframe>
+</body>
+</html>
